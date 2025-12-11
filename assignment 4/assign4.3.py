@@ -1,0 +1,6 @@
+s1 = input("enter frist string"). replace(' ', '')
+s2 = input("enter second string"). replace(' ', '')
+set_s1 = set(s1)
+set_s2 = set(s2)
+balanced = set_s1.issubset(set_s2)
+print("values =", balanced)
