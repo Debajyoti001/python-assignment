@@ -1,8 +1,15 @@
-l=[1,2,3]
-newlist=[]
-for i in range(len(l)):
-    x=l[0:i]+l[i+1:]
-    print(x)
-    if x not in newlist:
-        newlist.append(x)
-print(newlist)
+#["eat", "tea", "tan", "ate", "nat", "bat"]
+#eat tea tan ate nat bat
+
+
+s = input("Enter words separated by space: ").split()
+
+groups = {}
+
+for w in s:
+    key = ''.join(sorted(w))
+    groups.setdefault(key, []).append(w)
+
+result = list(groups.values())
+
+print("Grouped anagrams:", result)
